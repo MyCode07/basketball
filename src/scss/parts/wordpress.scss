@@ -1,0 +1,231 @@
+.wp-block-columns {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    margin-inline: auto;
+    max-width: $container + px;
+
+    @media (max-width: $containerWithPadding + px) {
+        max-width: none;
+        padding-inline: $padding + px;
+    }
+
+    & > :not(:last-child) {
+        margin-right: 15px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 80px;
+    }
+
+    .wp-block-columns {
+        margin-bottom: 0;
+        padding-inline: 0;
+        @include adaptive-value("margin-top", 50, 30, 1);
+
+        &._border {
+            border-radius: 20px;
+            border: 1px solid #e3e3e3;
+            padding: 30px;
+
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-bottom: 10px;
+            }
+        }
+
+        &._line {
+            border-top: 1px solid #e3e3e3;
+            padding-top: 20px;
+
+            &:last-of-type {
+                border-bottom: 1px solid #e3e3e3;
+                padding-bottom: 20px;
+            }
+
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .is-layout-flow {
+        &:not(:last-of-type) {
+        }
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    p {
+        &:not(:last-of-type) {
+            margin-bottom: 15px;
+        }
+
+        a {
+        }
+
+        &._italic {
+            &:before {
+                display: block;
+                content: "";
+                width: 63px;
+                background-color: #e3e3e3;
+                height: 1px;
+                margin-bottom: 15px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    figure {
+        margin-top: 25px;
+    }
+
+    figcaption {
+        margin-top: 16px;
+        color: #969696;
+        font-size: 16px;
+        font-style: italic;
+        margin-bottom: 0;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    }
+
+    blockquote {
+        p {
+        }
+
+        div,
+        figure {
+            span,
+            p,
+            figcaption {
+            }
+
+            img {
+            }
+        }
+    }
+
+    ol {
+        li {
+            span {
+            }
+        }
+    }
+
+    ul {
+        counter-reset: num;
+        margin-top: 30px;
+
+        & > :not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 25px;
+
+            & > :not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        li {
+            counter-increment: num;
+
+            &:has(strong) {
+                display: flex;
+                align-items: center;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                strong {
+                    &:before {
+                        content: counter(num) ". ";
+                    }
+                }
+            }
+
+            &:not(:has(strong)) {
+                &:before {
+                    content: counter(num) ".";
+                }
+            }
+
+            font-style: italic;
+
+            strong {
+                color: #ca0000;
+                font-family: Bebas Neue;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 1;
+                text-transform: uppercase;
+                margin-right: 7px;
+            }
+        }
+    }
+
+    img {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav {
+        & > :not(:last-child) {
+        }
+
+        ul {
+            & > :not(:last-child) {
+            }
+
+            & > :first-child {
+            }
+
+            li {
+                &:before {
+                }
+
+                a {
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 781px) {
+    .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+        flex-basis: 100% !important;
+    }
+}
