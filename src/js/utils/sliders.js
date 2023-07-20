@@ -3,7 +3,6 @@ import { Swiper, Lazy, Pagination, Navigation } from "swiper";
 const sliderSection = document.querySelector('.slider');
 const slider = sliderSection.querySelector('.swiper');
 const sliderSlides = slider.querySelectorAll('.swiper .swiper-slide');
-console.log(slider.dataset);
 
 if (sliderSlides.length) {
     const prevArrow = sliderSection.querySelector('.slider__arrows-prev');
@@ -15,8 +14,6 @@ if (sliderSlides.length) {
             Pagination, Navigation
         ],
         loop: true,
-
-
 
         navigation: {
             prevEl: prevArrow,

@@ -22,14 +22,17 @@
 // load footer
 @import "common/footer";
 
-// load footer
-@import "common/menu";
-
-// load side fixed
-// @import "common/side-fixed";
-
 // load error 404
 @import "common/404";
+
+// load side fixed
+@import "common/side-fixed";
+
+// load menu
+@import "common/menu";
+
+// load to top
+@import "common/to-top";
 
 // load hero
 @import "parts/hero";
@@ -46,7 +49,5 @@
 // load background
 @import "parts/background";
 
-
 // load wordpress
 @import "parts/wordpress";
-
