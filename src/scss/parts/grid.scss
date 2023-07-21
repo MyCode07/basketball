@@ -71,7 +71,7 @@
 
                 padding: 25px 10px 30px 10px;
 
-                img{
+                img {
                     height: 48px;
                     width: auto;
                     object-fit: unset;
@@ -216,9 +216,12 @@
         }
     }
 
-    &.news{
-
-        ._btn{
+    &.news {
+        .grid__top {
+            @include adaptive-value("margin-bottom", 50, 30, 1);
+        }
+        
+        ._btn {
             margin-left: auto;
             margin-right: auto;
             margin-top: 30px;
