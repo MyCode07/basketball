@@ -139,12 +139,20 @@
                         a {
                             display: flex;
                             padding: 9px 15px;
-                            justify-content: center;
                             align-items: center;
 
                             border-radius: 30px;
                             background: #fafafa;
                             font-size: 14px;
+
+                            transition: all 0.3s ease 0s;
+
+                            @media (any-hover: hover) {
+                                &:hover {
+                                    background: #ca0000;
+                                    color: #fff;
+                                }
+                            }
                         }
                     }
                 }
