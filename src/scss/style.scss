@@ -34,6 +34,9 @@
 // load to top
 @import "common/to-top";
 
+// load form
+@import "common/form";
+
 // load hero
 @import "parts/hero";
 
@@ -49,10 +52,14 @@
 // load background
 @import "parts/background";
 
-
 // load casino reviews
 @import "parts/casino-reviews";
 
+// load breadcrumbs
+@import "parts/breadcrumbs";
+ 
+// load table
+@import "parts/table";
+
 // load wordpress
 @import "parts/wordpress";
-

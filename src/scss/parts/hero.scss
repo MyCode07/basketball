@@ -249,4 +249,41 @@
             }
         }
     }
+
+    // .hero-sigle
+
+    &-single {
+        .hero__flex {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero__left {
+            text-align: center;
+            margin-bottom: 50px;
+
+            @media (max-width:768px){
+                margin-bottom: 40px;
+            }
+        }
+
+        .hero__left,
+        .hero__right {
+            width: 100%;
+            max-width: none;
+            flex: unset;
+        }
+
+        .table-bold {
+            @media (max-width: 768px) {
+                margin-bottom: 20px;
+                margin-top: 0;
+
+                p{
+                    margin-bottom: 0 !important;
+                    padding-top: 0;
+                }
+            }
+        }
+    }
 }

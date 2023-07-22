@@ -10,129 +10,103 @@
         // .form__rows-content
 
         &-content {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: flex-end;
 
-            p {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+            & > :not(:last-child) {
+                margin-right: 15px;
 
-                img {
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
                 }
             }
-        }
 
-        &-left,
-        &-right {
-        }
-
-        // .form__rows-left
-
-        &-left {
-        }
-
-        // .form__rows-right
-
-        &-right {
+            @media (max-width: 768px) {
+                display: block;
+                gap: 0;
+            }
         }
     }
 
     // .form__input
 
     &__input {
-        // form__input-file
+        display: flex;
+        flex-direction: column;
 
-        &-file {
-            border-bottom: unset;
-
-            .file-label {
-            }
-
-            .file-input {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-
-                // .file-input__body
-
-                &__body {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-
-                img {
-                }
-
-                input {
-                    display: none;
-                }
-
-                span {
-                    display: block;
-                }
-            }
+        @media (max-width: 768px) {
+            width: 100%;
         }
-    }
 
-    // .form__radio
+        label {
+            color: #ccc;
+            font-family: Bebas Neue;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1;
+            text-transform: uppercase;
+            transform: translate(0, 50%);
+            background-color: #fff;
+            width: fit-content;
+            margin-left: 26px;
+            padding: 0 4px;
+        }
 
-    &__radio {
-        .form__input {
-            div {
-                display: flex;
-                justify-content: space-between;
-                position: relative;
+        input {
+            border-radius: 10px;
+            border: 1px solid #cfcfcf;
 
-                input {
-                    height: 30px;
-                    width: 30px;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    opacity: 0;
-                    cursor: pointer;
-                    z-index: 5;
+            font-weight: 500;
+            letter-spacing: -0.72px;
+            padding: 18px 20px 18px 30px;
+            width: 100%;
+            font-size: 18px;
+            height: 60px;
 
-                    &:checked + .checkmark {
-                        background-image: url("@img/svg/checked.svg");
-                    }
-                }
+            &::placeholder {
+                color: #cccccc;
+            }
 
-                label {
-                }
-
-                .checkmark {
-                    position: relative;
-                    height: 30px;
-                    flex: 0 0 30px;
-                    width: 30px;
-                    background-color: unset;
-                    border: 1px solid #fff;
-                    border-radius: 5px;
-                    pointer-events: none;
-
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: contain;
-                }
+            @media (max-width: 768px) {
+                max-width: none;
             }
         }
     }
 
-    .answer {
-        position: absolute;
-        left: 0;
-        top: 0;
+    // .form__button
 
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease 0s;
+    &__button {
+        position: relative;
 
-        &._active {
-            opacity: 1;
-            visibility: visible;
+        input {
+            width: 100%;
+            cursor: pointer;
+            height: 60px;
+
+            @media (max-width: 768px) {
+                max-width: none;
+            }
+        }
+
+        .wpcf7-spinner {
+            position: absolute;
+            bottom: 0;
+            transform: translate(-50%, 28px);
+            left: 50%;
+            margin: 0;
         }
     }
+}
+
+.wpcf7-response-output {
+    border-radius: 20px;
+    text-align: center !important;
+    margin-inline: 0 !important;
+}
+
+.invalid .wpcf7-response-output {
+    border-color: #d20023 !important;
 }
