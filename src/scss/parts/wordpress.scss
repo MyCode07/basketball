@@ -4,20 +4,23 @@
     justify-content: center;
 
     width: 100%;
+    max-width: 630px;
     margin-inline: auto;
-    max-width: $container + px;
-
-    @media (max-width: $containerWithPadding + px) {
-        max-width: none;
-        padding-inline: $padding + px;
-    }
 
     & > :not(:last-child) {
         margin-right: 15px;
     }
 
     @media (max-width: 768px) {
+        max-width: none;
+        padding-inline: $padding + px;
         margin-bottom: 80px;
+
+        flex-direction: column;
+
+        & > :not(:last-child) {
+            margin-bottom: 50px;
+        }
     }
 
     &._border {
@@ -75,6 +78,8 @@
         @include adaptive-value("margin-top", 50, 30, 1);
         width: 100%;
 
+        max-width: none;
+
         &._border {
             h3,
             h4,
@@ -82,6 +87,8 @@
             h6 {
                 margin-bottom: 10px;
             }
+
+            padding-inline: 30px;
         }
 
         &._line {
@@ -109,9 +116,8 @@
             margin-top: 0;
         }
 
-        img{
-
-            &:first-child{
+        img {
+            &:first-child {
                 margin-bottom: 20px;
             }
         }
