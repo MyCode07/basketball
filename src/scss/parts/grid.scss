@@ -45,19 +45,19 @@
                 margin-bottom: 10px;
             }
 
-            div {
-                & > :not(:last-child) {
+            p {
+                &:not(:last-of-type) {
                     margin-bottom: 10px;
                 }
 
-                p strong {
+                strong {
                     display: block;
                 }
             }
 
             img {
                 border-radius: 10px;
-                margin: 20px 5px 5px 5px;
+                margin-top: 20px;
 
                 height: 180px;
                 object-fit: cover;
@@ -220,7 +220,7 @@
         .grid__top {
             @include adaptive-value("margin-bottom", 50, 30, 1);
         }
-        
+
         ._btn {
             margin-left: auto;
             margin-right: auto;
