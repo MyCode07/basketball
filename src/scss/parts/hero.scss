@@ -124,12 +124,6 @@
             }
 
             nav {
-                margin-bottom: 59px;
-
-                @media (max-width: 768px) {
-                    margin-bottom: 40px;
-                }
-
                 ul {
                     display: flex;
                     flex-wrap: wrap;
@@ -144,6 +138,7 @@
                             border-radius: 30px;
                             background: #fafafa;
                             font-size: 14px;
+                            text-transform: uppercase;
 
                             transition: all 0.3s ease 0s;
 
@@ -256,6 +251,16 @@
                 margin-top: 50px;
             }
         }
+
+        .hero__sidebar-navigation {
+            margin-top: 50px;
+            text-align: left;
+
+            @media (max-width: 768px) {
+                margin-bottom: 40px;
+                margin-top: 0;
+            }
+        }
     }
 
     // .hero-sigle
@@ -280,12 +285,6 @@
             width: 100%;
             max-width: none;
             flex: unset;
-        }
-
-        .hero__sidebar nav {
-            @media (max-width: 768px) {
-                margin-bottom: 0;
-            }
         }
 
         .table-bold {
